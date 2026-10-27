@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FJS2 Tipslinjen</title>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <div class="wrap">
+
+    <header>
+      <h1>FJS2 Tipslinjen</h1>
+      <p>Dela synpunkter, idéer eller problem. Du kan välja att vara anonym.</p>
+    </header>
+
+    <div class="card">
+      <h2>Skicka ett tips</h2>
+      <p class="help">Det tar ungefär en minut. Skriv så kort eller utförligt som du vill.</p>
+
+      <form id="tipsForm">
+        <label>Vad gäller ditt tips?</label>
+        <div class="choices">
+          <label class="choice"><input type="checkbox" name="amne" value="Utbildningens innehåll"> Utbildningens innehåll</label>
+          <label class="choice"><input type="checkbox" name="amne" value="Lärare eller undervisning"> Lärare eller undervisning</label>
+          <label class="choice"><input type="checkbox" name="amne" value="LIA eller praktik"> LIA eller praktik</label>
+          <label class="choice"><input type="checkbox" name="amne" value="Studiemiljö eller trivsel"> Studiemiljö eller trivsel</label>
+          <label class="choice"><input type="checkbox" name="amne" value="Schema, workload eller planering"> Schema, workload eller planering</label>
+          <label class="choice"><input type="checkbox" name="amne" value="Information och kommunikation"> Information och kommunikation</label>
+          <label class="choice"><input type="checkbox" name="amne" value="Examination eller betyg"> Examination eller betyg</label>
+          <label class="choice"><input type="checkbox" name="amne" value="Något annat"> Något annat</label>
+        </div>
+
+        <label>Hur påverkar det dig eller klassen?</label>
+        <div class="choices">
+          <label class="choice"><input type="radio" name="paverkan" value="Det fungerar bra" required> Det fungerar bra</label>
+          <label class="choice"><input type="radio" name="paverkan" value="Det fungerar okej, men kan förbättras"> Det fungerar okej, men kan förbättras</label>
+          <label class="choice"><input type="radio" name="paverkan" value="Det skapar problem"> Det skapar problem</label>
+          <label class="choice"><input type="radio" name="paverkan" value="Det är akut"> Det är akut</label>
+        </div>
+
+        <label for="beskrivning">Beskriv gärna kort</label>
+        <textarea id="beskrivning" name="beskrivning" maxlength="1000" required placeholder="Vad är problemet eller idén? När händer det? Vilken lösning föreslår du?"></textarea>
+        <p class="small">Max 1000 tecken. Det räcker med några meningar.</p>
+
+        <div class="anon">
+          <input type="checkbox" id="anonym" name="anonym" value="Ja">
+          <div>
+            <label for="anonym" style="margin:0">Jag vill att tipset tas upp anonymt</label>
+            <p class="small" style="margin:4px 0 0">Om du väljer detta delar vi inte ditt namn eller kontaktuppgifter i ledningsgruppen.</p>
+          </div>
+        </div>
+
+        <label for="namn">Namn, om du vill</label>
+        <input type="text" id="namn" name="namn" placeholder="Valfritt">
+
+        <label for="kontakt">E-post, om du vill få återkoppling</label>
+        <input type="email" id="kontakt" name="kontakt" placeholder="Din e-postadress, valfritt">
+        <p class="small">Frivilligt. Lämnar du ingen kontakt kan vi inte ställa följdfrågor eller återkoppla direkt.</p>
+
+        <button type="submit" id="sendBtn">Skicka tips</button>
+        <div id="status" class="status"></div>
+        <p class="note">Vi läser alla tips och sammanställer återkommande synpunkter inför ledningsgruppsmöten.</p>
+      </form>
+    </div>
+
+    <div class="card">
+      <h2>Vad händer efteråt?</h2>
+      <p class="help">Så hanterar vi det du skickar in.</p>
+      <ul class="steps">
+        <li><span>1</span><div><strong>Vi läser tipset.</strong><br>Alla inskick läses av studentrepresentanterna.</div></li>
+        <li><span>2</span><div><strong>Vi sorterar och prioriterar.</strong><br>Vi ser om det är en enskild synpunkt, något återkommande eller något akut.</div></li>
+        <li><span>3</span><div><strong>Vi tar upp det i ledningsgruppen.</strong><br>Återkommande och viktiga ärenden sammanställs till nästa möte.</div></li>
+        <li><span>4</span><div><strong>Vi återkopplar.</strong><br>Efter mötet delar vi kort vad som togs upp och vad som blev resultatet.</div></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Vad kan vi påverka?</h2>
+      <p class="help">För att tipsen ska hamna rätt.</p>
+      <div class="limits">
+        <div class="limit">
+          <h3>Vi kan förmedla</h3>
+          <p>Synpunkter på utbildning, LIA, studiemiljö, kommunikation, schema och examination.</p>
+        </div>
+        <div class="limit">
+          <h3>Vi kan inte lova</h3>
+          <p>Att varje enskilt tips leder till förändring. Vissa beslut ligger hos skolan, lärare eller MYH.</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      FJS2 Tipslinjen · Din röst hjälper oss förbättra utbildningen
+    </footer>
+
+  </div>
+  <script href="js/index.js" defer> </script>
+</body>
+</html>
