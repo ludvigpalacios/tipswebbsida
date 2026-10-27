@@ -4,6 +4,9 @@ const form = document.getElementById("tipsForm");
 const statusBox = document.getElementById("status");
 const sendBtn = document.getElementById("sendBtn");
 
+
+console.log("Script loaded!");
+
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
