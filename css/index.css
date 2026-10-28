@@ -84,17 +84,19 @@
         position:relative;width:min(680px,100%);min-height:min(480px,calc(100dvh - 48px));
         max-height:calc(100dvh - 48px);overflow-y:auto;background:var(--card);
         border:1px solid var(--line);border-radius:18px;padding:32px;
-        box-shadow:0 24px 70px rgb(15 23 42 / 25%)}
+        box-shadow:0 24px 70px rgb(15 23 42 / 25%);display:flex;flex-direction:column}
     .feedback-popup__dialog h2{
         padding-right:40px}
     .feedback-popup__content{
-        min-height:300px}
+        min-height:300px;flex:1;display:flex;flex-direction:column}
     .feedback-popup__close{
         position:absolute;top:16px;right:16px;width:40px;height:40px;margin:0;
         padding:0;border:1px solid var(--line);border-radius:50%;
         background:#fff;color:var(--ink);font-size:26px;line-height:1}
     .feedback-popup__close:hover{
         background:#f3f4f6}
+    .feedback-textarea{
+        flex:1;min-height:0;resize:vertical}
     footer{
         margin-top:30px;font-size:13px;color:var(--muted);text-align:center}
     @media(max-width:560px){
