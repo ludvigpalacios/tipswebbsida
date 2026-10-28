@@ -3,9 +3,27 @@ const FORM_ENDPOINT = "https://formspree.io/f/mljjbzka";
 const form = document.getElementById("tipsForm");
 const statusBox = document.getElementById("status");
 const sendBtn = document.getElementById("sendBtn");
+const feedbackPopup = document.getElementById("feedbackPopup");
+const feedbackSend = document.getElementById("feedback-send");
+const feedbackClose = document.getElementById("feedback-popup__close");
 
 
 console.log("Script loaded!");
+
+/* Göm feedback-popup om användaren klickar stäng-knappen */
+feedbackClose.addEventListener("click", async (e) => {
+    e.preventDefault();
+    feedbackPopup.hidden = true;
+})
+
+/* Skicka iväg feedback form-data som separat inskick */
+feedbackSend.addEventListener("click", async (e) => {
+    e.preventDefault();
+    
+    const feedbackData = form.feedback.value.trim();
+
+    
+})
 
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
