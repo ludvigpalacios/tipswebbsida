@@ -25,6 +25,10 @@ feedbackSend.addEventListener("click", async (e) => {
     
 })
 
+function showFeedbackForm() {
+    feedbackPopup.hidden = true;
+}
+
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
@@ -60,6 +64,7 @@ form.addEventListener("submit", async (e) => {
 
         show("ok", "Tack! Ditt tips har skickats.");
         form.reset();
+        showFeedbackForm();
     } catch (err) {
         show("err", "Något gick fel. Försök igen eller kontakta studentrepresentanterna direkt.");
     } finally {
